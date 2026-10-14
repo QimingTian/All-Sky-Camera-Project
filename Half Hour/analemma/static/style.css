@@ -1,0 +1,221 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --line: #2a3140;
+  --text: #e8ecf3;
+  --muted: #9aa7bd;
+  --accent: #ffb347;
+  --accent-2: #5b9dff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "SF Pro Text", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1a2030, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  padding: 24px 32px 8px;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+}
+.subtitle { color: var(--muted); margin: 6px 0 0; }
+
+.steps {
+  display: flex;
+  gap: 8px;
+  padding: 0 32px 16px;
+}
+.step-tab {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.step-tab.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(255, 179, 71, 0.08);
+}
+
+main { padding: 0 32px 40px; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+.panel-head { margin-bottom: 18px; }
+.panel-head h2 { margin: 0 0 6px; }
+.panel-head p { margin: 0; color: var(--muted); }
+.panel-head.split {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.card {
+  background: var(--panel);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.card:hover { border-color: var(--accent-2); }
+.card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(255, 179, 71, 0.35);
+}
+.card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+}
+.card .meta {
+  padding: 10px 12px 12px;
+  font-size: 0.88rem;
+}
+.card .meta strong { display: block; }
+.card .meta span { color: var(--muted); }
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+button {
+  background: var(--accent);
+  color: #18140c;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.controls-inline {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+input[type="time"] {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.annotate-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 18px;
+}
+.side {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+}
+.base-preview img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.progress-box { margin: 16px 0; }
+.bar {
+  height: 8px;
+  background: #0b0d11;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+}
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+#btn-autodetect { width: 100%; margin-bottom: 4px; }
+.hint { color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
+
+.canvas-wrap {
+  position: relative;
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 420px;
+}
+#frame-canvas {
+  width: 100%;
+  display: block;
+  cursor: crosshair;
+}
+.frame-label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.render-box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+  min-height: 320px;
+}
+#render-preview {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+}
+#render-result {
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .annotate-layout { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,58 @@
+{
+  "camera": "ASC fisheye, 1920x1080",
+  "site": [
+    41.879,
+    -71.966
+  ],
+  "site_name": "Pomfret Center, CT",
+  "width": 1920,
+  "height": 1080,
+  "parity": 1,
+  "x0": 968.8437874154391,
+  "y0": 624.3119517164171,
+  "coef": [
+    765.0929733118825,
+    3.8805075316050095,
+    0.5336162252161584
+  ],
+  "asym": [
+    -2.0428945939081355,
+    1.813500740187131
+  ],
+  "M": [
+    [
+      -0.8534564306715126,
+      0.5206751394847479,
+      0.02257255120668428
+    ],
+    [
+      -0.5210838104064145,
+      -0.8532847277758677,
+      -0.019412260991329103
+    ],
+    [
+      0.009153331512227969,
+      -0.02832970997029649,
+      0.9995567237807093
+    ]
+  ],
+  "tilt_from_vertical_deg": 1.7060466047129306,
+  "tilt_azimuth_deg": 162.09435119129333,
+  "axis_roll_deg": 319.30466309246964,
+  "fit": {
+    "source_frame": "2026-09-15_22-26-55_seq0001of0001_gain250_exp60.000s.tiff",
+    "n_stars": 31,
+    "rms_px": 0.2787080631851096,
+    "utc_mid": [
+      2026,
+      9,
+      16,
+      2,
+      27,
+      25.0
+    ],
+    "jd": 2461299.602372685,
+    "theta_max_fit_deg": 73.87395328665019
+  },
+  "note": "M maps local horizontal (east, north, up) into the camera frame and is valid for as long as the camera is not moved. Equatorial conversions only need a UTC timestamp."
+}

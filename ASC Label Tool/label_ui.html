@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASC Label Tool — Clear / Cloudy</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f1117;
+      color: #e8eaed;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    h1 { font-size: 20px; margin: 0; font-weight: 600; }
+    .meta { color: #9aa0a6; font-size: 14px; }
+    .progress-bar {
+      height: 6px;
+      background: #2a2f3a;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .progress-bar > div {
+      height: 100%;
+      background: linear-gradient(90deg, #4f8cff, #6ee7b7);
+      width: 0%;
+      transition: width 0.2s;
+    }
+    .card {
+      background: #171b24;
+      border: 1px solid #2a3140;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 420px;
+      background: #0b0d12;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .image-box img {
+      max-width: 100%;
+      max-height: 62vh;
+      object-fit: contain;
+    }
+    .section-title {
+      font-size: 13px;
+      color: #9aa0a6;
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .row-3 {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .row-3 { grid-template-columns: 1fr; }
+    }
+    button {
+      border: 1px solid #3a4354;
+      background: #222833;
+      color: #e8eaed;
+      border-radius: 10px;
+      padding: 14px 10px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    button:hover { background: #2c3444; border-color: #5b6b85; }
+    button.active {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 0 0 2px rgba(59,130,246,0.35);
+    }
+    button.active.clear { background: #0f766e; border-color: #14b8a6; }
+    button.active.cloudy { background: #b45309; border-color: #f59e0b; }
+    button.active.bad { background: #b91c1c; border-color: #ef4444; }
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .nav button.primary {
+      background: #16a34a;
+      border-color: #22c55e;
+      font-weight: 600;
+      flex: 1;
+      min-width: 180px;
+    }
+    .nav button.primary:hover { background: #15803d; }
+    .hint {
+      color: #7c8493;
+      font-size: 13px;
+      line-height: 1.55;
+      margin-top: 8px;
+    }
+    .filename { color: #93c5fd; word-break: break-all; }
+    .rule {
+      color: #cbd5e1;
+      font-size: 13px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    input.notes {
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #3a4354;
+      background: #0b0d12;
+      color: #e8eaed;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>ASC Label Tool</h1>
+      <div class="meta" id="stats">加载中...</div>
+    </header>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+
+    <div class="card">
+      <p class="rule">
+        天文台门控：<b>Clear</b> = 现在可观测；<b>Cloudy</b> = 现在不可观测。
+        有雨或雪 → 通常标 Cloudy，并勾 rain/snow。
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="meta" style="margin-bottom:10px">
+        <span id="indexLabel">-</span> · <span class="filename" id="filenameLabel">-</span>
+      </div>
+      <div class="image-box">
+        <img id="preview" alt="preview" />
+      </div>
+    </div>
+
+    <div class="card row-3">
+      <div>
+        <p class="section-title">Sky (1 / 2)</p>
+        <div style="display:flex; gap:10px">
+          <button data-sky="clear" class="clear" style="flex:1">Clear</button>
+          <button data-sky="cloudy" class="cloudy" style="flex:1">Cloudy</button>
+        </div>
+      </div>
+      <div>
+        <p class="section-title">Rain (R / F)</p>
+        <div style="display:flex; gap:10px">
+          <button data-rain="true" class="bad" style="flex:1">rain</button>
+          <button data-rain="false" style="flex:1">no rain</button>
+        </div>
+      </div>
+      <div>
+        <p class="section-title">Snow (S / Q)</p>
+        <div style="display:flex; gap:10px">
+          <button data-snow="true" class="bad" style="flex:1">snow</button>
+          <button data-snow="false" style="flex:1">no snow</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="section-title">Day / Night (Y / N) — 已按文件名粗推，可改</p>
+      <div style="display:flex; gap:10px; max-width:420px">
+        <button data-dn="day" style="flex:1">day</button>
+        <button data-dn="night" style="flex:1">night</button>
+      </div>
+      <input class="notes" id="notes" placeholder="notes（可选）" />
+    </div>
+
+    <div class="card nav">
+      <button id="prevBtn">← 上一张</button>
+      <button class="primary" id="saveNextBtn">保存并下一张 (Enter)</button>
+      <button id="nextBtn">下一张 →</button>
+      <button id="jumpBtn">跳转到未标注</button>
+    </div>
+
+    <p class="hint">
+      快捷键：<b>1</b>=Clear · <b>2</b>=Cloudy · <b>R</b>/<b>F</b>=rain · <b>S</b>/<b>Q</b>=snow ·
+      <b>Y</b>/<b>N</b>=day/night · Enter/Space=保存下一张 · ←/→ 切换
+    </p>
+  </div>
+
+  <script>
+    let images = [];
+    let labels = {};
+    let index = 0;
+    let current = { sky: "", rain: "", snow: "", day_night: "", notes: "" };
+
+    const preview = document.getElementById("preview");
+    const stats = document.getElementById("stats");
+    const indexLabel = document.getElementById("indexLabel");
+    const filenameLabel = document.getElementById("filenameLabel");
+    const progressFill = document.getElementById("progressFill");
+    const notesInput = document.getElementById("notes");
+
+    function isComplete(row) {
+      return row && row.sky && row.rain && row.snow && row.day_night;
+    }
+
+    function findStartIndex() {
+      for (let i = 0; i < images.length; i++) {
+        if (!isComplete(labels[images[i]])) return i;
+      }
+      return 0;
+    }
+
+    function findNextUnlabeled(from) {
+      for (let i = from; i < images.length; i++) {
+        if (!isComplete(labels[images[i]])) return i;
+      }
+      for (let i = 0; i < from; i++) {
+        if (!isComplete(labels[images[i]])) return i;
+      }
+      return -1;
+    }
+
+    function setActiveButtons() {
+      document.querySelectorAll("[data-sky]").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.sky === current.sky);
+      });
+      document.querySelectorAll("[data-rain]").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.rain === current.rain);
+      });
+      document.querySelectorAll("[data-snow]").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.snow === current.snow);
+      });
+      document.querySelectorAll("[data-dn]").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.dn === current.day_night);
+      });
+    }
+
+    function loadCurrentToForm() {
+      const name = images[index];
+      const row = labels[name] || {};
+      current.sky = row.sky || "";
+      current.rain = row.rain || "";
+      current.snow = row.snow || "";
+      current.day_night = row.day_night || "";
+      current.notes = row.notes || "";
+      notesInput.value = current.notes;
+      preview.src = `/img/${encodeURIComponent(name)}?t=${Date.now()}`;
+      indexLabel.textContent = `${index + 1} / ${images.length}`;
+      filenameLabel.textContent = name;
+      setActiveButtons();
+    }
+
+    function updateStats(labeled, total) {
+      stats.textContent = `已完成 ${labeled} / ${total}`;
+      progressFill.style.width = total ? `${(labeled / total) * 100}%` : "0%";
+    }
+
+    async function saveCurrent(overrideName, overrideState) {
+      const name = overrideName || images[index];
+      const state = overrideState || {
+        sky: current.sky,
+        rain: current.rain,
+        snow: current.snow,
+        day_night: current.day_night,
+        notes: notesInput.value.trim(),
+      };
+      const res = await fetch("/api/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          filename: name,
+          sky: state.sky,
+          rain: state.rain,
+          snow: state.snow,
+          day_night: state.day_night,
+          notes: state.notes,
+        }),
+      });
+      const data = await res.json();
+      if (!data.ok) {
+        alert(data.error || "save failed");
+        return false;
+      }
+      labels[name] = {
+        filename: name,
+        sky: state.sky,
+        rain: state.rain,
+        snow: state.snow,
+        day_night: state.day_night,
+        notes: state.notes,
+      };
+      updateStats(data.labeled, data.total);
+      return true;
+    }
+
+    async function saveAndNext() {
+      if (!current.sky) return alert("请选择 Clear / Cloudy");
+      if (!current.rain) return alert("请选择 rain");
+      if (!current.snow) return alert("请选择 snow");
+      if (!current.day_night) return alert("请选择 day / night");
+      const name = images[index];
+      const snapshot = {
+        sky: current.sky,
+        rain: current.rain,
+        snow: current.snow,
+        day_night: current.day_night,
+        notes: notesInput.value.trim(),
+      };
+      // Advance UI immediately — don't wait on disk I/O
+      if (index < images.length - 1) {
+        index++;
+        loadCurrentToForm();
+      } else {
+        alert("所有图片已标注完毕！");
+      }
+      const ok = await saveCurrent(name, snapshot);
+      if (!ok) {
+        // roll back to the failed image so user can retry
+        const back = images.indexOf(name);
+        if (back >= 0) {
+          index = back;
+          loadCurrentToForm();
+        }
+      }
+    }
+
+    async function init() {
+      const res = await fetch("/api/state");
+      const data = await res.json();
+      images = data.images;
+      labels = data.labels;
+      updateStats(data.labeled, data.total);
+
+      document.querySelectorAll("[data-sky]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          current.sky = btn.dataset.sky;
+          setActiveButtons();
+        });
+      });
+      document.querySelectorAll("[data-rain]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          current.rain = btn.dataset.rain;
+          setActiveButtons();
+        });
+      });
+      document.querySelectorAll("[data-snow]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          current.snow = btn.dataset.snow;
+          setActiveButtons();
+        });
+      });
+      document.querySelectorAll("[data-dn]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          current.day_night = btn.dataset.dn;
+          setActiveButtons();
+        });
+      });
+
+      index = findStartIndex();
+      loadCurrentToForm();
+
+      document.getElementById("prevBtn").onclick = async () => {
+        await saveCurrent();
+        if (index > 0) { index--; loadCurrentToForm(); }
+      };
+      document.getElementById("nextBtn").onclick = async () => {
+        await saveCurrent();
+        if (index < images.length - 1) { index++; loadCurrentToForm(); }
+      };
+      document.getElementById("saveNextBtn").onclick = saveAndNext;
+      document.getElementById("jumpBtn").onclick = async () => {
+        await saveCurrent();
+        const next = findNextUnlabeled(index + 1);
+        if (next >= 0) { index = next; loadCurrentToForm(); }
+        else alert("所有图片都已标注完成！");
+      };
+
+      document.addEventListener("keydown", (e) => {
+        if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); saveAndNext(); return; }
+        if (e.key === "ArrowLeft") { document.getElementById("prevBtn").click(); return; }
+        if (e.key === "ArrowRight") { document.getElementById("nextBtn").click(); return; }
+        if (e.key === "1") { current.sky = "clear"; setActiveButtons(); return; }
+        if (e.key === "2") { current.sky = "cloudy"; setActiveButtons(); return; }
+        if (e.key === "r" || e.key === "R") { current.rain = "true"; setActiveButtons(); return; }
+        if (e.key === "f" || e.key === "F") { current.rain = "false"; setActiveButtons(); return; }
+        if (e.key === "s" || e.key === "S") { current.snow = "true"; setActiveButtons(); return; }
+        if (e.key === "q" || e.key === "Q") { current.snow = "false"; setActiveButtons(); return; }
+        if (e.key === "y" || e.key === "Y") { current.day_night = "day"; setActiveButtons(); return; }
+        if (e.key === "n" || e.key === "N") { current.day_night = "night"; setActiveButtons(); return; }
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

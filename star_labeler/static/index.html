@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>Star Labeler — 2026-09-15_22-26-55</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <main>
+    <div id="stage">
+      <canvas id="view"></canvas>
+      <canvas id="loupe"></canvas>
+      <div id="hud"></div>
+    </div>
+    <div id="toolbar">
+      <label>亮度 <input type="range" id="brightness" min="1" max="30" step="0.1" value="2.2"><span class="val" id="brightnessVal">2.2×</span></label>
+      <label>Gamma <input type="range" id="gamma" min="0.2" max="1" step="0.02" value="0.72"><span class="val" id="gammaVal">0.72</span></label>
+      <label>黑点 <input type="range" id="black" min="0" max="120" step="1" value="34"><span class="val" id="blackVal">34</span></label>
+      <label class="chk"><input type="checkbox" id="snap" checked> 吸附到星点</label>
+      <label class="chk"><input type="checkbox" id="showLoupe" checked> 放大镜</label>
+      <button id="reset">重置视图</button>
+    </div>
+  </main>
+
+  <aside>
+    <h1>星点标注</h1>
+    <p class="sub">2026-09-15_22-26-55 · gain250 · 60s · 1920×1080</p>
+
+    <div id="editor" class="hidden">
+      <div class="coord" id="editorCoord"></div>
+      <input type="text" id="nameInput" list="starNames" placeholder="这颗星叫什么？" autocomplete="off">
+      <datalist id="starNames"></datalist>
+      <div class="row">
+        <button id="saveName" class="primary">确认</button>
+        <button id="cancelName">取消</button>
+        <button id="deletePoint" class="danger">删除</button>
+      </div>
+      <p class="hint">Enter 确认 · Esc 取消</p>
+    </div>
+
+    <div id="listWrap">
+      <div class="listHead">
+        <span>已标注 <b id="count">0</b></span>
+        <span id="status"></span>
+      </div>
+      <ul id="list"></ul>
+    </div>
+
+    <div class="row wrap">
+      <button id="exportCsv">导出 CSV</button>
+      <button id="exportJson">导出 JSON</button>
+      <button id="clearAll" class="danger">清空</button>
+    </div>
+
+    <details class="help">
+      <summary>怎么用</summary>
+      <ul>
+        <li>点击图上的星点 → 右侧输入名字 → Enter 确认</li>
+        <li>滚轮缩放，按住空格或右键拖动平移</li>
+        <li>点已有标记可改名，拖动标记可微调位置</li>
+        <li>标注自动存到 <code>labels.json</code></li>
+      </ul>
+    </details>
+  </aside>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

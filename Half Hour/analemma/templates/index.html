@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analemma · Half Hour</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Analemma</h1>
+    <p class="subtitle">暮光底片 + 逐日检测太阳位置 + 画太阳</p>
+  </header>
+
+  <nav class="steps">
+    <button class="step-tab active" data-step="1">1 · 暮光底片</button>
+    <button class="step-tab" data-step="2">2 · 时间 & 标注</button>
+    <button class="step-tab" data-step="3">3 · 合成</button>
+  </nav>
+
+  <main>
+    <section id="step-1" class="panel active">
+      <div class="panel-head">
+        <h2>选择一张暮光天空作底片</h2>
+        <p>{{ twilight_window }} 的所有 Half Hour 帧都会列出，请自行挑选一张干净暮光空场。</p>
+      </div>
+      <div id="twilight-grid" class="grid"></div>
+      <div class="actions">
+        <button id="to-step-2" disabled>下一步：设置时间</button>
+      </div>
+    </section>
+
+    <section id="step-2" class="panel">
+      <div class="panel-head split">
+        <div>
+          <h2>标注太阳</h2>
+          <p id="annotate-meta">先点「自动检测」，再逐张检查：点击改正太阳中心，S 跳过。时刻为 EST 标准时间，夏令时期间自动取晚一小时的文件。</p>
+        </div>
+        <div class="controls-inline">
+          <label>
+            时刻 (EST)
+            <input id="target-time" type="time" value="09:30" step="1800" />
+          </label>
+          <label>
+            太阳大小
+            <input id="sun-radius" type="range" min="3" max="30" value="6" />
+            <span id="sun-radius-val">6</span> px
+          </label>
+          <button id="apply-time" class="secondary">应用时刻 / 刷新列表</button>
+        </div>
+      </div>
+
+      <div class="annotate-layout">
+        <aside class="side">
+          <div class="base-preview">
+            <div class="label">底片</div>
+            <img id="base-thumb" alt="base plate" />
+          </div>
+          <div class="progress-box">
+            <div id="progress-text">0 / 0</div>
+            <div class="bar"><div id="progress-bar"></div></div>
+          </div>
+          <button id="btn-autodetect">自动检测太阳</button>
+          <p id="autodetect-result" class="hint"></p>
+          <div class="btn-row">
+            <button id="btn-prev" class="secondary">← 上一张</button>
+            <button id="btn-next" class="secondary">下一张 →</button>
+          </div>
+          <div class="btn-row">
+            <button id="btn-back" class="secondary">重置本张</button>
+            <button id="btn-skip" class="secondary">Skip</button>
+          </div>
+          <p class="hint">点击设中心 · S 跳过 · ←/→ 翻页 · 青色十字 = 星历预测位置</p>
+        </aside>
+
+        <div class="canvas-wrap">
+          <canvas id="frame-canvas"></canvas>
+          <div id="frame-label" class="frame-label"></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="to-step-3">去看合成</button>
+      </div>
+    </section>
+
+    <section id="step-3" class="panel">
+      <div class="panel-head">
+        <h2>合成预览</h2>
+        <p id="render-meta">在暮光底片上，每个有效日期的位置画一个太阳。</p>
+      </div>
+      <div class="render-box">
+        <img id="render-preview" alt="analemma preview" />
+      </div>
+      <div class="actions">
+        <button id="btn-render">生成 Analemma</button>
+        <button id="back-annotate" class="secondary">返回继续标注</button>
+      </div>
+      <pre id="render-result"></pre>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# All-sky camera data and generated media
+*.tif
+*.tiff
+*.mp4
+*.mov
+
+# Python artifacts and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local application state and generated outputs
+Half Hour/analemma/output/*
+Half Hour/analemma/projects/current.json
+Night Monitor/*/raw_copy/
+Night Monitor/*/cleaned/
+Night Monitor/*/diagnostics*/
+
+# macOS metadata
+.DS_Store
+._*
+# Per-date capture folders and annotation session state
+Night Monitor/[0-9]*/
+Half Hour/analemma/projects/*.json

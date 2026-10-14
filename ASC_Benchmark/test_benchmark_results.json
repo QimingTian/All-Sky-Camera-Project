@@ -1,0 +1,257 @@
+{
+  "test_n": 178,
+  "legacy_test_n": 122,
+  "models": [
+    {
+      "model": "v0",
+      "n": 178,
+      "sky_acc": 0.8426966292134831,
+      "rain_acc": 0.8595505617977528,
+      "sky_cloudy_f1": 0.8715596330275229,
+      "rain_f1": 0.7967479674796748,
+      "rain_recall": 0.6621621621621622,
+      "rain_precision": 1.0,
+      "gate_acc": 0.8258426966292135,
+      "false_ok_rate": 0.10674157303370786,
+      "false_nogo_rate": 0.06741573033707865,
+      "false_ok_count": 19,
+      "false_nogo_count": 12,
+      "sky_tp_fp_fn": [
+        95,
+        19,
+        9
+      ],
+      "rain_tp_fp_fn": [
+        49,
+        0,
+        25
+      ],
+      "gate_tp_fp_fn_tn": [
+        107,
+        12,
+        19,
+        40
+      ]
+    },
+    {
+      "model": "v0.5",
+      "n": 178,
+      "sky_acc": 0.8370786516853933,
+      "rain_acc": 0.8820224719101124,
+      "sky_cloudy_f1": 0.8733624454148472,
+      "rain_f1": 0.8372093023255814,
+      "rain_recall": 0.7297297297297297,
+      "rain_precision": 0.9818181818181818,
+      "gate_acc": 0.8146067415730337,
+      "false_ok_rate": 0.08426966292134831,
+      "false_nogo_rate": 0.10112359550561797,
+      "false_ok_count": 15,
+      "false_nogo_count": 18,
+      "sky_tp_fp_fn": [
+        100,
+        25,
+        4
+      ],
+      "rain_tp_fp_fn": [
+        54,
+        1,
+        20
+      ],
+      "gate_tp_fp_fn_tn": [
+        111,
+        18,
+        15,
+        34
+      ]
+    },
+    {
+      "model": "v0.6",
+      "n": 178,
+      "sky_acc": 0.8932584269662921,
+      "rain_acc": 0.898876404494382,
+      "sky_cloudy_f1": 0.9140271493212669,
+      "rain_f1": 0.8615384615384616,
+      "rain_recall": 0.7567567567567568,
+      "rain_precision": 1.0,
+      "gate_acc": 0.8876404494382022,
+      "false_ok_rate": 0.07865168539325842,
+      "false_nogo_rate": 0.033707865168539325,
+      "false_ok_count": 14,
+      "false_nogo_count": 6,
+      "sky_tp_fp_fn": [
+        101,
+        16,
+        3
+      ],
+      "rain_tp_fp_fn": [
+        56,
+        0,
+        18
+      ],
+      "gate_tp_fp_fn_tn": [
+        112,
+        6,
+        14,
+        46
+      ]
+    },
+    {
+      "model": "v1",
+      "n": 178,
+      "sky_acc": 0.9382022471910112,
+      "rain_acc": 0.9269662921348315,
+      "sky_cloudy_f1": 0.9493087557603687,
+      "rain_f1": 0.9051094890510948,
+      "rain_recall": 0.8378378378378378,
+      "rain_precision": 0.9841269841269841,
+      "gate_acc": 0.9213483146067416,
+      "false_ok_rate": 0.056179775280898875,
+      "false_nogo_rate": 0.02247191011235955,
+      "false_ok_count": 10,
+      "false_nogo_count": 4,
+      "sky_tp_fp_fn": [
+        103,
+        10,
+        1
+      ],
+      "rain_tp_fp_fn": [
+        62,
+        1,
+        12
+      ],
+      "gate_tp_fp_fn_tn": [
+        116,
+        4,
+        10,
+        48
+      ]
+    }
+  ],
+  "models_on_legacy_122": [
+    {
+      "model": "v0",
+      "n": 122,
+      "sky_acc": 0.8278688524590164,
+      "rain_acc": 0.9098360655737705,
+      "sky_cloudy_f1": 0.8727272727272727,
+      "rain_f1": 0.8705882352941177,
+      "rain_recall": 0.7708333333333334,
+      "rain_precision": 1.0,
+      "gate_acc": 0.8852459016393442,
+      "false_ok_rate": 0.04918032786885246,
+      "false_nogo_rate": 0.06557377049180328,
+      "false_ok_count": 6,
+      "false_nogo_count": 8,
+      "sky_tp_fp_fn": [
+        72,
+        15,
+        6
+      ],
+      "rain_tp_fp_fn": [
+        37,
+        0,
+        11
+      ],
+      "gate_tp_fp_fn_tn": [
+        80,
+        8,
+        6,
+        28
+      ]
+    },
+    {
+      "model": "v0.5",
+      "n": 122,
+      "sky_acc": 0.8114754098360656,
+      "rain_acc": 0.9426229508196722,
+      "sky_cloudy_f1": 0.8654970760233918,
+      "rain_f1": 0.9213483146067416,
+      "rain_recall": 0.8541666666666666,
+      "rain_precision": 1.0,
+      "gate_acc": 0.8688524590163934,
+      "false_ok_rate": 0.03278688524590164,
+      "false_nogo_rate": 0.09836065573770492,
+      "false_ok_count": 4,
+      "false_nogo_count": 12,
+      "sky_tp_fp_fn": [
+        74,
+        19,
+        4
+      ],
+      "rain_tp_fp_fn": [
+        41,
+        0,
+        7
+      ],
+      "gate_tp_fp_fn_tn": [
+        82,
+        12,
+        4,
+        24
+      ]
+    },
+    {
+      "model": "v0.6",
+      "n": 122,
+      "sky_acc": 0.8770491803278688,
+      "rain_acc": 0.9590163934426229,
+      "sky_cloudy_f1": 0.9090909090909091,
+      "rain_f1": 0.945054945054945,
+      "rain_recall": 0.8958333333333334,
+      "rain_precision": 1.0,
+      "gate_acc": 0.9426229508196722,
+      "false_ok_rate": 0.02459016393442623,
+      "false_nogo_rate": 0.03278688524590164,
+      "false_ok_count": 3,
+      "false_nogo_count": 4,
+      "sky_tp_fp_fn": [
+        75,
+        12,
+        3
+      ],
+      "rain_tp_fp_fn": [
+        43,
+        0,
+        5
+      ],
+      "gate_tp_fp_fn_tn": [
+        83,
+        4,
+        3,
+        32
+      ]
+    },
+    {
+      "model": "v1",
+      "n": 122,
+      "sky_acc": 0.9426229508196722,
+      "rain_acc": 0.9754098360655737,
+      "sky_cloudy_f1": 0.9565217391304347,
+      "rain_f1": 0.968421052631579,
+      "rain_recall": 0.9583333333333334,
+      "rain_precision": 0.9787234042553191,
+      "gate_acc": 0.9590163934426229,
+      "false_ok_rate": 0.01639344262295082,
+      "false_nogo_rate": 0.02459016393442623,
+      "false_ok_count": 2,
+      "false_nogo_count": 3,
+      "sky_tp_fp_fn": [
+        77,
+        6,
+        1
+      ],
+      "rain_tp_fp_fn": [
+        46,
+        1,
+        2
+      ],
+      "gate_tp_fp_fn_tn": [
+        84,
+        3,
+        2,
+        33
+      ]
+    }
+  ],
+  "created_utc": "2026-09-10T03:04:43.869583+00:00"
+}
