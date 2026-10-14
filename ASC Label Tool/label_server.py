@@ -401,6 +401,7 @@ def start_flusher(labels_ref: dict[str, dict[str, str]]) -> None:
 
 def stop_flusher(labels_ref: dict[str, dict[str, str]]) -> None:
     """Final synchronous flush on shutdown."""
+    global _dirty
     _stop_flush.set()
     _flush_event.set()
     if _flush_thread is not None:
