@@ -274,7 +274,14 @@ def train(args):
     if len(samples) < 20:
         raise SystemExit(f"Need more labels, only {len(samples)}")
 
-    train_s, val_s, val_dates = split_by_date(samples)
+    fixed_val_dates = None
+    if args.val_dates_from:
+        source = json.loads(Path(args.val_dates_from).read_text(encoding="utf-8"))
+        fixed_val_dates = set(source["val_dates"])
+        missing_dates = fixed_val_dates - {s.date for s in samples}
+        if missing_dates:
+            raise SystemExit(f"Validation dates absent from samples: {sorted(missing_dates)}")
+    train_s, val_s, val_dates = split_by_date(samples, fixed_val_dates)
     print(f"samples={len(samples)} train={len(train_s)} val={len(val_s)} val_dates={val_dates}")
     print(
         "train sky",
@@ -358,6 +365,13 @@ def train(args):
                 "n_val": len(val_s),
                 "n_total_labeled": len(samples),
                 "note": args.note,
+                "config": {
+                    "epochs": args.epochs,
+                    "batch": args.batch,
+                    "lr": args.lr,
+                    "seed": args.seed,
+                    "val_dates_from": args.val_dates_from,
+                },
             }
             torch.save(ckpt, OUT_DIR / "best.pt")
             with (OUT_DIR / "best_metrics.json").open("w") as f:
@@ -374,6 +388,7 @@ def main():
     p.add_argument("--batch", type=int, default=16)
     p.add_argument("--lr", type=float, default=3e-4)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--val-dates-from", type=str, default=None)
     p.add_argument("--out", type=str, default=str(TOOL_DIR / "runs" / "v0"))
     p.add_argument(
         "--note",

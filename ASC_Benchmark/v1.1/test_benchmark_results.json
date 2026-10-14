@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-10-14T15:45:17.207486+00:00",
+  "test_n": 178,
+  "test_filenames_sha256": "e09344ca0ed87f6065a062b9dbd3a005745cd3bd2761dc9625291dde0416f589",
+  "models": [
+    {
+      "model": "v1",
+      "checkpoint": "model_backups/v1/best.pt",
+      "checkpoint_sha256": "60ff314718871df55a7075b39dcb0a8ab0550a723f502ca08d0bec5759e5b51e",
+      "n": 178,
+      "sky_acc": 0.9382022471910112,
+      "rain_acc": 0.9269662921348315,
+      "sky_cloudy_f1": 0.9493087557603687,
+      "rain_f1": 0.9051094890510949,
+      "rain_recall": 0.8378378378378378,
+      "rain_precision": 0.9841269841269841,
+      "gate_acc": 0.9213483146067416,
+      "false_ok_rate": 0.056179775280898875,
+      "false_nogo_rate": 0.02247191011235955,
+      "false_ok_count": 10,
+      "false_nogo_count": 4,
+      "sky_tp_fp_fn": [
+        103,
+        10,
+        1
+      ],
+      "rain_tp_fp_fn": [
+        62,
+        1,
+        12
+      ],
+      "gate_tp_fp_fn_tn": [
+        116,
+        4,
+        10,
+        48
+      ]
+    },
+    {
+      "model": "v1.1",
+      "checkpoint": "runs/v1.1/best.pt",
+      "checkpoint_sha256": "b5aa47b8d8c049c18ba98734b7e02b19fc53c584f6681ed15bc3e5b0d9ff8558",
+      "n": 178,
+      "sky_acc": 0.898876404494382,
+      "rain_acc": 0.9101123595505618,
+      "sky_cloudy_f1": 0.9158878504672897,
+      "rain_f1": 0.8805970149253731,
+      "rain_recall": 0.7972972972972973,
+      "rain_precision": 0.9833333333333333,
+      "gate_acc": 0.8820224719101124,
+      "false_ok_rate": 0.08426966292134831,
+      "false_nogo_rate": 0.033707865168539325,
+      "false_ok_count": 15,
+      "false_nogo_count": 6,
+      "sky_tp_fp_fn": [
+        98,
+        12,
+        6
+      ],
+      "rain_tp_fp_fn": [
+        59,
+        1,
+        15
+      ],
+      "gate_tp_fp_fn_tn": [
+        111,
+        6,
+        15,
+        46
+      ]
+    }
+  ]
+}
