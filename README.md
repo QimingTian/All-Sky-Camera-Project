@@ -73,7 +73,7 @@ Read [`star_labeler/CALIBRATION.md`](star_labeler/CALIBRATION.md) and [`star_lab
 
 Contains benchmark manifests/results and compact plots/previews related to the ASC image-classification work. Keep manifests and reproducibility metadata with the code; large source images belong in the separate dataset storage.
 
-The [v1.1 training and benchmark report](ASC_Benchmark/v1.1/BENCHMARK.md) compares v1 and v1.1 on the same frozen 178-frame Test set. v1.1 was trained on 2,243 frames, with 432 held out for validation, after 540 new labeled frames were added to the marked corpus. Its test result was worse than v1, so the v1 checkpoint remains the preferred model. The full checkpoints are kept locally under `ASC Label Tool/model_backups/`, outside Git.
+The [v1.1 report](ASC_Benchmark/v1.1/BENCHMARK.md) compares v1 and v1.1 on the original frozen 178-frame Test set. The [v1.2 report](ASC_Benchmark/v1.2/BENCHMARK.md) evaluates all three versions on that same set plus a separate 47-frame September 5 holdout. On the 225-frame combined set, v1.2 ties v1 on GO/NO-GO accuracy (92.89%), while on the original 178 frames v1 remains slightly ahead (92.13% vs 91.57%). v1 remains the preferred GO/NO-GO model pending more independent test dates. Full checkpoints remain local under `ASC Label Tool/model_backups/`, outside Git.
 
 ### `ASC Label Tool/` — labeling and model workflow
 

@@ -1,0 +1,1587 @@
+{
+  "created_utc": "2026-10-14T17:08:25.204259+00:00",
+  "policy": "Versioned expansion before v1.2 training. Test excluded from train, validation, and checkpoint selection.",
+  "parent_manifest": "manifest.json",
+  "parent_manifest_sha256": "fdc7a8071202252f1eaa5ecf9e312c632e1d23243cacb502f2dc7894a870e57a",
+  "n_test_prior": 178,
+  "added_date": "2026-09-05",
+  "added_count": 47,
+  "n_test": 225,
+  "test_files": [
+    {
+      "filename": "2026-06-14_1500.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_0930.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_1300.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_1530.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_1630.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_1800.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_1930.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-06-30_2000.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-06-30_2030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-06-30_2200.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-01_0000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-01_0130.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-01_0430.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-01_0800.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_1000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_1100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_1300.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_1500.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_1700.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_1900.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-01_2100.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-01_2230.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-02_0100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-02_0330.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-02_0530.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-02_0800.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-02_1000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-02_1200.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-02_1400.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-02_1630.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-02_1800.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-02_2030.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-02_2200.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-03_0030.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-03_0230.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-03_0330.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-03_0500.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-03_0630.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_0830.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_1000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_1100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_1230.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_1430.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_1630.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-03_2100.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-03_2300.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-04_0100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-04_0300.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-04_0500.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-04_0630.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_0730.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_1030.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_1100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_1330.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_1530.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_1830.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-04_2100.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-04_2330.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-05_0130.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-05_0300.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-05_0400.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-05_0600.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-05_0830.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-05_1130.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-05_1330.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-05_1530.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-05_1800.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-05_2000.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-05_2300.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-06_0000.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-06_0130.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-06_0330.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-06_0500.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-06_0600.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_0730.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_1030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_1200.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_1330.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_1530.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_1700.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_1830.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-06_2100.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-06_2230.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-07_0030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-07_0200.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-07_0500.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-07_0600.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_0800.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_0930.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_1100.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_1300.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_1430.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_1600.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_1800.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_1930.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-07_2030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-07_2230.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0000.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0200.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0330.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0400.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0430.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0500.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0530.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_0600.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_0630.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_0700.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_0730.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_0830.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_1100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_1200.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_1400.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_1730.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_1800.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-08_2100.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-08_2300.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-09_0030.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-09_0130.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-09_0300.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-09_0500.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-09_0530.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-09_0600.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-10_0430.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-11_0000.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-11_0100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-11_1000.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-13_0230.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-07-13_0830.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-07-13_1230.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-07_1330.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-07_2230.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-07_2300.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_0100.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_0200.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_0230.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_0800.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-08_1100.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-08_1230.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-08_2100.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_2130.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_2230.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_2300.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-08_2330.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-09_0030.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-09_0500.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-10_0500.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-10_0530.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-10_0800.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-10_0900.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-12_1700.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-12_1730.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-12_2000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-12_2030.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-13_0030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-13_0630.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-13_0800.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-13_1800.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-13_1830.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-13_1900.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-13_1930.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-13_2000.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-14_0700.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-14_1630.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-14_1700.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-14_1730.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-14_1930.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-14_2130.tiff",
+      "sky": "clear",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-15_0000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-15_0400.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-15_1700.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-16_0500.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-16_0830.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-17_0030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-17_0330.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-17_0800.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-17_1030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-08-18_0300.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-08-18_0430.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0000.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0030.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0100.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0130.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0200.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0230.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0300.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0330.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0400.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0430.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0500.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0530.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_0600.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0630.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0700.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0730.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0800.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0830.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0900.tiff",
+      "sky": "clear",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_0930.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1000.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1030.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1100.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1130.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1200.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1230.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1300.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1400.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1430.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1500.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1530.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1600.tiff",
+      "sky": "cloudy",
+      "rain": "false",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1630.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1700.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1730.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1800.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1830.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1900.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_1930.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "day"
+    },
+    {
+      "filename": "2026-09-05_2000.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2030.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2100.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2130.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2200.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2230.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2300.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    },
+    {
+      "filename": "2026-09-05_2330.tiff",
+      "sky": "cloudy",
+      "rain": "true",
+      "snow": "false",
+      "day_night": "night"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-14T17:45:11.484844+00:00",
+  "test_n": 225,
+  "test_filenames_sha256": "905c9e0b62651cf7228770553d39a8eaa15ee350b209c4a3feb8f46b4aaaab3b",
+  "models": [
+    {
+      "model": "v1",
+      "checkpoint": "model_backups/v1/best.pt",
+      "checkpoint_sha256": "60ff314718871df55a7075b39dcb0a8ab0550a723f502ca08d0bec5759e5b51e",
+      "n": 225,
+      "sky_acc": 0.9422222222222222,
+      "rain_acc": 0.9377777777777778,
+      "sky_cloudy_f1": 0.9523809523809523,
+      "rain_f1": 0.9186046511627907,
+      "rain_recall": 0.8586956521739131,
+      "rain_precision": 0.9875,
+      "gate_acc": 0.9288888888888889,
+      "false_ok_rate": 0.04888888888888889,
+      "false_nogo_rate": 0.022222222222222223,
+      "false_ok_count": 11,
+      "false_nogo_count": 5,
+      "sky_tp_fp_fn": [
+        130,
+        11,
+        2
+      ],
+      "rain_tp_fp_fn": [
+        79,
+        1,
+        13
+      ],
+      "gate_tp_fp_fn_tn": [
+        143,
+        5,
+        11,
+        66
+      ]
+    },
+    {
+      "model": "v1.1",
+      "checkpoint": "model_backups/v1.1/best.pt",
+      "checkpoint_sha256": "b5aa47b8d8c049c18ba98734b7e02b19fc53c584f6681ed15bc3e5b0d9ff8558",
+      "n": 225,
+      "sky_acc": 0.9155555555555556,
+      "rain_acc": 0.9244444444444444,
+      "sky_cloudy_f1": 0.929368029739777,
+      "rain_f1": 0.8994082840236687,
+      "rain_recall": 0.8260869565217391,
+      "rain_precision": 0.987012987012987,
+      "gate_acc": 0.9022222222222223,
+      "false_ok_rate": 0.07111111111111111,
+      "false_nogo_rate": 0.02666666666666667,
+      "false_ok_count": 16,
+      "false_nogo_count": 6,
+      "sky_tp_fp_fn": [
+        125,
+        12,
+        7
+      ],
+      "rain_tp_fp_fn": [
+        76,
+        1,
+        16
+      ],
+      "gate_tp_fp_fn_tn": [
+        138,
+        6,
+        16,
+        65
+      ]
+    },
+    {
+      "model": "v1.2",
+      "checkpoint": "runs/v1.2/best.pt",
+      "checkpoint_sha256": "045be61a9abac8456ffad36aa6bd0b17032fc4d78b145598c7b349cc8dd6972d",
+      "n": 225,
+      "sky_acc": 0.9511111111111111,
+      "rain_acc": 0.9511111111111111,
+      "sky_cloudy_f1": 0.9584905660377359,
+      "rain_f1": 0.9364161849710982,
+      "rain_recall": 0.8804347826086957,
+      "rain_precision": 1.0,
+      "gate_acc": 0.9288888888888889,
+      "false_ok_rate": 0.05333333333333334,
+      "false_nogo_rate": 0.017777777777777778,
+      "false_ok_count": 12,
+      "false_nogo_count": 4,
+      "sky_tp_fp_fn": [
+        127,
+        6,
+        5
+      ],
+      "rain_tp_fp_fn": [
+        81,
+        0,
+        11
+      ],
+      "gate_tp_fp_fn_tn": [
+        142,
+        4,
+        12,
+        67
+      ]
+    }
+  ]
+}

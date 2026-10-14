@@ -125,9 +125,10 @@ def main() -> None:
     parser.add_argument("--model", action="append", nargs=2, metavar=("NAME", "CHECKPOINT"), required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--batch", type=int, default=16)
+    parser.add_argument("--manifest", type=Path, default=MANIFEST)
     args = parser.parse_args()
 
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     rows = manifest["test_files"]
     names = [row["filename"] for row in rows]
     actual = {p.name for p in TEST_DIR.iterdir() if p.is_file() and not p.name.startswith("._")}
